@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1509050589 source:c:\users\user\menu start\desktop\c++\dobryprogramcieplutkopolecam\main.cpp
+	<cstdlib>
+	<iostream>
+	<ctype.h>
+	<cstring>
+	<cmath>
+

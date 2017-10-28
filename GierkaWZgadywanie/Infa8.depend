@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1506004094 source:c:\users\user\menu start\desktop\c++\infa8\main.cpp
+	<iostream>
+	<time.h>
+	<ctime>
+	<cstdlib>
+

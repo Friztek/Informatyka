@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1506330111 source:c:\users\user\menu start\desktop\c++\infa10\main.cpp
+	<iostream>
+	<time.h>
+	<ctime>
+	<cstdlib>
+

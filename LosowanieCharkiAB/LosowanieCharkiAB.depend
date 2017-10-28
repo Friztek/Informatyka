@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1507820220 source:c:\users\user\menu start\desktop\c++\losowaniecharkiab\main.cpp
+	<iostream>
+	<windows.h>
+	<time.h>
+
