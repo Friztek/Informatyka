@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1472899888 source:c:\users\user\menu start\desktop\c++\petle\petle\main.cpp
+	<iostream>
+	<windows.h>
+
+1472900308 source:c:\users\user\menu start\desktop\c++\petle\petle\petlafor2.cpp
+	<iostream>
+

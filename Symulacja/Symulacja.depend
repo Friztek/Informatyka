@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1504970802 source:c:\users\user\menu start\desktop\c++\symulacja\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	<ctime>
+	<conio.h>
+

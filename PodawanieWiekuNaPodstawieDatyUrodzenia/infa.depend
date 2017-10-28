@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1505120903 source:c:\users\user\menu start\desktop\c++\infa\main.cpp
+	<iostream>
+	<windows.h>
+
+1505120903 source:c:\users\user\menu start\desktop\c++\podawaniewiekunapodstawiedatyurodzenia\main.cpp
+	<iostream>
+	<windows.h>
+
