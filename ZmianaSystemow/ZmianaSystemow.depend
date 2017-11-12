@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1510518875 source:c:\users\user\menu start\desktop\c++\cppox\zmianasystemow\main.cpp
+	<iostream>
+	<math.h>
+	<string>
+
