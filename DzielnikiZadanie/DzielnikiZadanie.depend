@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512379960 source:c:\users\user\menu start\desktop\c++\informatyka\dzielnikizadanie\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+
