@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1515499294 source:c:\users\user\menu start\desktop\c++\cppox\zadani123\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+

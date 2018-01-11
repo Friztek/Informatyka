@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1515496301 source:c:\users\user\menu start\desktop\c++\cppox\zadanie2\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<cmath>
+

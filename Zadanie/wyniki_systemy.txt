@@ -1,0 +1,6 @@
+dane_systemy1.txt
+-1011
+dane_systemy2.txt
+-1001100
+dane_systemy3.txt
+-1001011
