@@ -187,6 +187,7 @@ void ZmienneTab(){
 }
 
 void WpisWczyt(){
+    int key;
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     system("CLS");
@@ -200,7 +201,9 @@ void WpisWczyt(){
     SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL(" \n \n Na ekranie wyświetli się wtedy: \"4   8\" ");
     cout <<PL(" \n \n \n ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL(" Aby w wyświetleniu przejść do nowego wiersza, można użyć albo "); SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
     cout << "\\n\""; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN ); cout << " \n albo ";
@@ -212,7 +215,9 @@ void WpisWczyt(){
     cout << " cout << \"\\t\" "; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL(", a niektóre znaki specjalne, \n typu backslash czy cudzysłowie poprzedza się backslaschem. ");
     cout <<PL(" \n \n \n ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL(" Jednym ze sposobów, by do zmiennej przypisać wartość, jest użycie innego\n strumienia - ");SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
     cout << " std::cin"; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN ); cout << PL(", którego operatorem jest \" >>\". Używa się go,\n by w programie podać liczbę: ");
@@ -226,7 +231,9 @@ void WpisWczyt(){
 
     cout << "\n \n \n";
     cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
 
     int wynik=0;
@@ -320,6 +327,7 @@ void WpisWczyt(){
 }
 
 void FunkcWarunLogiczne(){
+    int key;
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     system("CLS");
@@ -334,7 +342,9 @@ void FunkcWarunLogiczne(){
     cout << "if (a==4) a=0; "; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL(" Jeśli a jest równe 4, za a podstaw 0. \n \n \n "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN);
     cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL(" Po funkcji if można dodać funkcję "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_INTENSITY ); cout << "else... ";SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL(" Funkcja else mówi o tym, co zrobić,  gdy warunek w if nie zostanie spełniony: \n"); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
@@ -344,7 +354,9 @@ void FunkcWarunLogiczne(){
     cout << "\n \n int l; \n if (l>0) cout << \"dodatnia\"; \n else if (l==0) cout << \"zero\"; \n else cout << \"ujemna\"; "; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL( "\n \n Czyli: Jeśli l jest większe od 0, wyświetl \"dodatnia\", w przeciwnym razie, \n jeśli l jest równe 0 wyświetl \"zero\", w przeciwnym razie wyświetl \"ujemna\". ");
     cout<< PL("\n \n \n ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL(" W jednej funkcji warunkowej można zmieścić kilka różnych warunków: "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
     cout << "\n int a; if (a==0 || a==2) cout << a; "; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
@@ -353,7 +365,9 @@ void FunkcWarunLogiczne(){
     cout << PL( "\n Czyli: jeśli b jest większe od 0 i jeśli jest mniejsze od 100, \n podziel b przez 2. ");
     cout << "\n \n \n";
     cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
 
 
@@ -485,6 +499,7 @@ void drukuj2()
 }
 
 void FOR(){
+    int key;
     system("CLS");
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
@@ -496,7 +511,9 @@ void FOR(){
     cout << PL( "\n \n (od jakiej wartości liczbowej zaczynamy - dowolna liczba całkowita np:4 ; \n do jakiej wartości chcemy dojść ; \n co się dzieje z tą liczbą (maleje czy rośnie o jeden)\n \n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << PL(" for (int liczba ; do jakiej watrości ; maleje czy rośnie) ){\n  \n        KOD KTÓRY MA SIĘ POWTARZAĆ } \n \n \n \n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE);
     cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
 
     cout<<PL(" PRZYKŁAD:"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
@@ -505,12 +522,15 @@ void FOR(){
     cout << " DODATKOWE INFORMACJE:"; SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE);
     cout << PL(" \n \n 1) można pomniejszać tą liczbę (zamiast i++ -> i--). \n Wtedy deklarujemy wykonywanie pętli dopóki i jest WIĘKSZE od jakieś wartości. \n \n 2. nieskończona pętla (wykonuje się w nieskończoność -> for ( ; ; ){ \n kod } \n \n \n");
     cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     drukuj();
 
 }
 
 void WHILE(){
+    int key;
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
@@ -521,12 +541,15 @@ void WHILE(){
     cout << PL(" \n int i=0; \n while (i<=5){ \n cout<<i<<endl; \n i++; } \n \n \n");
 
      cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     drukuj();
 
 }
 
 void DO_WHILE(){
+    int key;
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
@@ -537,7 +560,9 @@ void DO_WHILE(){
     cout << PL("\n int i=0; \n do {cout<<i<<endl; \n i++} \n while (i<=5); \n \n \n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
     cout << PL(" RÓŻNICA MIĘDZY WHILE I DO WHILE: "); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE);
     cout << PL("\n \n WHILE sprawdza najpierw warunek, który ma być spełniony. Dopiero kiedy jest \n on spełniony wykonuje czynność zawartą w nawiasach {}. \n DO WHILE przez swoją budowę, najpierw wykonuje się czynność zapisana \n w nawiasach, a gdy warunek, który znajduje się po kodzie jest spełniony, pętla  wykonuje się jeszcze raz. \n \n Ostatecznie, różnica między nimi jest taka, że DO WHILE zawsze wykona się \n przynajmniej raz,gdyż sprawdza warunek dopiero po wykonaniu się kodu.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     drukuj();
 
 }
@@ -554,12 +579,12 @@ void TEST(){
         cin>>odp;
 
     if (odp=='a' || odp=='A'){
-        cout<<PL(" POPRAWNA ODPOWIEDŹ! \n \n \n");
+        cout<<PL("\n POPRAWNA ODPOWIEDŹ! \n \n \n");
         punkty++;
     }
     else cout<<PL(" \n ŹLE! poprawna odpowiedź: a \n \n \n");
 
-    cout<<PL("...kliknij dowolny klawisz aby kontynuować");
+    cout<<PL(" ...kliknij dowolny klawisz aby kontynuować");
     getch();
     system ("cls");
 
@@ -569,12 +594,12 @@ void TEST(){
         cin>>odp;
 
     if (odp=='c' || odp=='C'){
-        cout<<PL(" POPRAWNA ODPOWIEDŹ! \n \n \n");
+        cout<<PL("\n POPRAWNA ODPOWIEDŹ! \n \n \n");
         punkty++;
     }
     else cout<<PL(" \n ŹLE! poprawna odpowiedź: c \n \n \n");
 
-    cout<<PL("...kliknij dowolny klawisz aby kontynuować");
+    cout<<PL(" ...kliknij dowolny klawisz aby kontynuować");
     getch();
     system ("cls");
 
@@ -584,12 +609,12 @@ void TEST(){
         cin>>odp;
 
     if (odp=='b' || odp=='B'){
-        cout<<PL("POPRAWNA ODPOWIEDŹ! \n \n \n ");
+        cout<<PL("\n POPRAWNA ODPOWIEDŹ! \n \n \n ");
         punkty++;
     }
     else cout<<PL(" \n ŹLE! poprawna odpowiedź: b \n \n \n");
 
-    cout<<PL("...kliknij dowolny klawisz aby kontynuować");
+    cout<<PL(" ...kliknij dowolny klawisz aby kontynuować");
     getch();
     system ("cls");
 
@@ -599,27 +624,27 @@ void TEST(){
         cin>>odp;
 
     if (odp=='c' || odp=='C'){
-        cout<<PL(" POPRAWNA ODPOWIEDŹ! \n \n \n");
+        cout<<PL("\n POPRAWNA ODPOWIEDŹ! \n \n \n");
         punkty++;
     }
-    else cout<<PL(" \n ŹLE! poprawna odpowiedź: c \n \n \n ");
+    else cout<<PL(" \n ŹLE! poprawna odpowiedź: c \n \n \n");
 
-    cout<<PL("...kliknij dowolny klawisz aby kontynuować");
+    cout<<PL(" ...kliknij dowolny klawisz aby kontynuować");
     getch();
     system ("cls");
 
     SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
      cout<<PL("5) Czym rózni się pętla WHILE od DO WHILE? "); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE);
-     cout << PL("\n \n a) niczym \n b) pętla DO WHILE wykonuje się zawsze przynajmniej raz* \n c) pętla WHILE wykonuje się zawsze przynajmniej raz* \n \n \n \n *ze względu na swoją budowę \n \n \n");
+     cout << PL("\n \n a) niczym \n b) pętla DO WHILE wykonuje się zawsze przynajmniej raz* \n c) pętla WHILE wykonuje się zawsze przynajmniej raz* \n \n  *ze względu na swoją budowę \n \n ");
         cin>>odp;
 
     if (odp=='b' || odp=='B'){
-        cout<<PL(" POPRAWNA ODPOWIEDŹ! \n \n \n");
+        cout<<PL("\n POPRAWNA ODPOWIEDŹ! \n \n \n");
         punkty++;
     }
     else cout<<PL(" \n ŹLE! poprawna odpowiedź: b \n \n \n");
 
-    cout<<PL("...kliknij dowolny klawisz aby kontynuować");
+    cout<<PL(" ...kliknij dowolny klawisz aby kontynuować");
     getch();
     system ("cls");
 
@@ -680,8 +705,9 @@ void petle_wyb()
 
 }
 void Funkcje(){
+    int key;
     HANDLE hOut;
-                hOut = GetStdHandle( STD_OUTPUT_HANDLE );
+    hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     system("CLS");
     cout << PL(" Funkcja jest nazwanym fragmentem programu. Podobnie jak zmienne, są różne typy  funkcji, takie jak int, char, bool, void (kiedy funkcja nie zwraca wartości). \n W zależności od tego różny typ zmiennej będzie zwracany. Funkcje zapisuje się\n w ten sposób: "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
     cout << " \n \n typ_zmiennej nazwa_funkcji (argumenty_funkcji) { return zwracana_wartosc; }  \n \n"; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
@@ -689,7 +715,9 @@ void Funkcje(){
     cout << " int obwod_kwadratu (int dlugosc_boku) { return dlugosc_boku*4; } \n \n"; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL(" Return zwraca wartośc odpowiednią dla typu funkcji, czyli int zwraca liczbę, \n bool prawdę lub fałsz, a void nie zwraca nic. Liczba argumentów w funkcji jest  dowolna, zapisuje się wtedy zawsze typ zmiennej i kończy średnikiem. Funkcja \n może też nie mieć żadnego argumentu. Od momentu deklaracji w dalszym kodzie \n korzystać z funkcji. ");
     cout<<PL(" \n \n ...kliknij dowolny klawisz aby kontynuować");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system ("cls");
     cout << PL(" Aby skorzystać z napisanej funkcji trzeba napisać jej nazwę i potrzebne argumenty. Jeśli zwraca warość daje się ją jako zwracaną warość zmeinnej, np: \n \n");
     SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
@@ -702,8 +730,9 @@ void Funkcje(){
 }
 
 void Pseudolosowosc(){
-                HANDLE hOut;
-                hOut = GetStdHandle( STD_OUTPUT_HANDLE );
+    int key;
+    HANDLE hOut;
+    hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     system("CLS");
     cout << PL(" W niektórych programach przydatne może być losowanie liczb. W bibliotece \n cstdlib znajduje się funkcja ");
     SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
@@ -720,7 +749,9 @@ void Pseudolosowosc(){
                 cout << " Pierwsze losowanie: "<< rand()<< endl;
                 cout << "\n \n";
                 cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL (" Używanie tej funkcji ma jednak poważną wadę: zawsze losuje te same liczby. \n Po uruchomieniu programu ponownie, można zauważyć że liczby nie zmieniły się. \n Jednak istnieje też inna funkcja - ");
     SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
@@ -738,7 +769,9 @@ void Pseudolosowosc(){
                 cout << "\n \n";
                 SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
                 cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL( " Połączenie tych dwóch funkcji nazywane jest pseudolosowością. \n");
                 cout << PL(" \n By ustalić zakres losowania, można skorzystać z reszty z dzielenia (modulo). \n W C++ zapisuje się to na przykład w ten sposób: \n \n 10%6; wynikiem będzie 4, bo 10:6 to 1 reszty 4. \n 7%7; wynikiem będzie 0, bo 7:7 to 1 reszty 0. \n \n");
@@ -752,11 +785,15 @@ void Pseudolosowosc(){
                 cout << " Pierwsze losowanie: "<< rand()%100<< endl;
                 cout << "\n \n";
                 cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
     cout << PL (" Oczywiście można w ten sposób uzyskać różne przedziały, na przykład: \n \n srand(time(NULL)); \n (rand()%36)+5; wylosuje liczbę od 5 do 41, \n (rand()%13)-9; wylosuje liczbę od -9 do 4, a \n (rand()%51)*(-1) wylosuje liczbę od -50 do 0. \n");
     cout << PL ("\n ...Czas na test! Wciśnij dowolny klawisz aby kontynuować.");
-    getch();
+    key=getch();
+    if (key==0 || key==224)
+        key=getch();
     system("cls");
 
     int wynik=0;
@@ -764,16 +801,16 @@ void Pseudolosowosc(){
     while (klik!='a' && klik!='b' && klik!='c'){
                         system("cls");
                         cout << PL(" Czas na test! Wsićnij klawisz a, b lub c na klawiaturze. \n") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-                        cout << PL(" Pytanie numer 1: w jakiej bibliotece znajduje się funkcja rand()? ") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+                        cout << PL(" Pytanie numer 1: w jakiej bibliotece znajduje się funkcja rand()? \n") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
                         cout << PL (" a) ctime ") << endl;
                         cout << PL (" b) cstdlib ") << endl;
                         cout << PL (" c) conio.h ") << endl;
                         klik = getch();
     }
 
-    if (klik=='b') cout << PL("Dobra odpowiedź! \n \n"), wynik++;
-    else cout << PL("Źle! Funkcja rand() znajduje się w bibliotece cstdlib. \n \n");
-    cout<<PL("...wciśnij dowolny klawisz aby kontynuować.");
+    if (klik=='b') cout << PL("\n Dobra odpowiedź! \n \n"), wynik++;
+    else cout << PL("\n Źle! Funkcja rand() znajduje się w bibliotece cstdlib. \n \n");
+    cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
     system("cls");
     klik=0;
@@ -781,16 +818,16 @@ void Pseudolosowosc(){
     while (klik!='a' && klik!='b' && klik!='c'){
                         system("cls");
                         cout << PL(" Czas na test! Wsićnij klawisz a, b lub c na klawiaturze. \n") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-                        cout << PL(" Pytanie numer 2: Która funkcja ustawia punkt startowy dla losowanych liczb?") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+                        cout << PL(" Pytanie numer 2: Która funkcja ustawia punkt startowy dla losowanych liczb?\n") << endl; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
                         cout << PL (" a) srand(); ") << endl;
                         cout << PL (" b) time(NULL); ") << endl;
                         cout << PL (" c) start(); ") << endl;
                         klik=getch();
     }
 
-    if (klik=='a') cout << "Dobra odpowiedź! \n \n", wynik++;
-    else cout << PL("Źle! Funkcja srand() ustawia punkt startowy dla losowanych liczb. \n \n");
-    cout<<PL("...wciśnij dowolny klawisz aby kontynuować.");
+    if (klik=='a') cout << "\n Dobra odpowiedź! \n \n", wynik++;
+    else cout << PL("\n Źle! Funkcja srand() ustawia punkt startowy dla losowanych liczb. \n \n");
+    cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
     system("cls");
     klik=0;
@@ -805,9 +842,9 @@ void Pseudolosowosc(){
                         klik=getch();
     }
 
-    if (klik=='b') cout << "Dobra odpowiedź! \n \n", wynik++;
-    else cout << PL("Źle! Reszta z dzielenia przez 40 jest w przedziale od 0 do 39, a po dodaniu liczby 1 przedział zmienia się na od 1 do 40. \n \n");
-    cout<<PL("...wciśnij dowolny klawisz aby kontynuować.");
+    if (klik=='b') cout << "\n Dobra odpowiedź! \n \n", wynik++;
+    else cout << PL("\n Źle! Reszta z dzielenia przez 40 jest w przedziale od 0 do 39, a po dodaniu \n liczby 1 przedział zmienia się na od 1 do 40. \n \n");
+    cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
     system("cls");
     klik=0;
@@ -822,9 +859,9 @@ void Pseudolosowosc(){
         klik=getch();
     }
 
-    if (klik=='a') cout << "Dobra odpowiedź! \n \n", wynik++;
-    else cout << PL("Źle! Liczba losowana jest z przedziału <0; 249>, po dodaniu zmienia się on na <250; 499>, a po podzieleniu na <2,5; 4,99>. \n \n");
-    cout<<PL("...wciśnij dowolny klawisz aby kontynuować.");
+    if (klik=='a') cout << "\n Dobra odpowiedź! \n \n", wynik++;
+    else cout << PL("\n Źle! Liczba losowana jest z przedziału <0; 249>, po dodaniu zmienia się on na\n <250; 499>, a po podzieleniu na <2,5; 4,99>. \n \n");
+    cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
     system("cls");
     klik=0;
@@ -839,9 +876,9 @@ void Pseudolosowosc(){
     klik=getch();
     }
 
-    if (klik=='c') cout << "Dobra odpowiedź! \n \n", wynik++;
-    else cout << PL("Źle! rand()%35 wylosuje liczbę od 0 do 34, po dodaniu 8 będzie to liczba od 8 do 42. \n \n");
-    cout<<PL("...wciśnij dowolny klawisz aby kontynuować.");
+    if (klik=='c') cout << "\n Dobra odpowiedź! \n \n", wynik++;
+    else cout << PL("\n Źle! rand()%35 wylosuje liczbę od 0 do 34, po dodaniu 8 będzie to liczba\n od 8 do 42. \n \n");
+    cout<<PL(" ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
     system("cls");
     cout << PL( " Koniec testu! Twój wynik to ") << wynik << PL("/5.");
@@ -853,25 +890,25 @@ void Biblioteki(){
     HANDLE hOut;
     hOut = GetStdHandle( STD_OUTPUT_HANDLE );
     system("CLS");
-    cout<<PL("Biblioteki są niezbędne w programowaniu, dzięki nim możemy uzyskać dostęp do \nróżnych funkcjii. Poczynając od cout'ów, kończąc na funkcjach sortujących\n\n");
-    cout<<PL("Deklarujemy je zawsze na początku kodu, "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout << "\"#include <NazwaBiblioteki>\","; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
-    cout << PL("\nmożemy dodać ich dowolną ilość, ale dla lepszej wydajności deklarujemy tylko te używane\n\n");
+    cout<<PL(" Biblioteki są niezbędne w programowaniu, dzięki nim możemy uzyskać dostęp do \n różnych funkcjii. Poczynając od cout'ów, kończąc na funkcjach sortujących\n\n");
+    cout<<PL(" Deklarujemy je zawsze na początku kodu, "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+    cout << "\" #include <NazwaBiblioteki>\","; SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout << PL("\n możemy dodać ich dowolną ilość, ale dla lepszej wydajności deklarujemy tylko te używane\n\n");
     SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("Często stosowane biblioteki: "); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout <<PL("\n1. iostream "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout<<PL(" Często stosowane biblioteki: "); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+    cout <<PL("\n 1. iostream "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL("- umożliwia korzystanie z wypisywania i wczytywania (cout, cin)\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("2. fstream "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout<<PL(" 2. fstream "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL("- pozwala na wczytywanie z i zapisywanie do pliku\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("3. conio.h "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
-    cout << PL("- znajduje się w niej przydatna funkcja getch(),\nktora odczytuje 1 znak podany przez użytkownika,\njest to niezbędne przy tworzeniu menu itp.\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("4. ctime "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout<<PL(" 3. conio.h "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout << PL("- znajduje się w niej przydatna funkcja getch(),\n ktora odczytuje 1 znak podany przez użytkownika,\n jest to niezbędne przy tworzeniu menu itp.\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+    cout<<PL(" 4. ctime "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
     cout << PL("- pobiera lokalny czas z komputera\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("5. windows.h"); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
-    cout << PL(" - przydatna funkcja sleep(CzasWMilisekundach),\nktóra zatrzymuje działanie programu na określony czas\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
-    cout<<PL("6. math.h "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
-    cout << PL("- pozwala na stosowanie funkcji matematycznych, np. sqr() - kwadrat\ndanej liczby lub sqrt() - pierwiastek");
-    cout<<PL("\n\n...wciśnij dowolny klawisz aby kontynuować.");
+    cout<<PL(" 5. windows.h"); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout << PL(" - przydatna funkcja sleep(CzasWMilisekundach),\n która zatrzymuje działanie programu na określony czas\n"); SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
+    cout<<PL(" 6. math.h "); SetConsoleTextAttribute( hOut, FOREGROUND_RED | FOREGROUND_BLUE |FOREGROUND_GREEN );
+    cout << PL("- pozwala na stosowanie funkcji matematycznych, np. sqr() - kwadrat\n danej liczby lub sqrt() - pierwiastek");
+    cout<<PL("\n\n ...wciśnij dowolny klawisz aby kontynuować.");
     getch();
 }
 
@@ -894,7 +931,7 @@ void PrzykladoweProgramyPomoc(string NazwaPliku){
             cout<<char(196);
         cout<<char(217);
         plik.close();
-        cout<<PL("Wciśnij dowolny klawisz aby kontynuować...");
+        cout<<PL(" Nawiguj strzałkami");
         char klik = getch();
         if (klik==77 && pozPrzyklad<4)
             pozPrzyklad++;
